@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        /* body {
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        } */
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 760px) {
+            .swiper-button-next {
+                right: 20px;
+                transform: rotate(90deg);
+            }
+
+            .swiper-button-prev {
+                left: 20px;
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="header-wrapper">
+            <div class="logo-container">
+                <img class="logo-img" src="./img/logo.png" alt="">
+            </div>
+            <div class="user-container">
+                <a class="user-log" href="javasccript:;">登录</a>
+                <a class="user-login" href="javasccript:;">注册</a>
+            </div>
+        </div>
+    </header>
+    <div class="page-mainer">
+        <section class="banner-section">
+            <div class="banner-wrapper">
+            </div>
+        </section>
+        <section class="navigator-section">
+            <div class="navigator-container" id="navigator-bar">
+                <ul class="navigator-list">
+                    <li class="navigator-item" data-nav="section-1">合作课程简介</li>
+                    <li class="navigator-item" data-nav="section-2">观看课程</li>
+                    <li class="navigator-item" data-nav="section-3">授课老师</li>
+                    <li class="navigator-item" data-nav="section-4">DragonBoard™ 410c</li>
+                    <li class="navigator-item" data-nav="section-5">关于 Qualcomm</li>
+                </ul>
+            </div>
+        </section>
+        <section class="introduction-section">
+            <div class="introduction-container" id="section-1">
+                <div class="introduction-title">
+                    <img src="./img/sub-title-intro.png" alt="">
+                </div>
+                <div class="introduction-txt">
+                    <p>DragonBoard™ 410c是第一款基于高通骁龙400(Qualcomm® Snapdragon™ 400)系列处理器的开发板，具备强大的处理能力，可以支持快速软件开发、教育以及原型设计。
+                        《DragonBoard 410c开发公开课》是美国高通公司和极客学院合作推出的专项培训课程之一，本课程从讲述相关概念到建立基于DragonBoard
+                        410c软硬件的开发环境搭建，给大家提供一些常见问题的解决方案，深入浅出地讲述实际应用开发过程中所使用开发工具，帮助大家循序渐进了解DragonBoard 并实现基于DragonBoard™
+                        410c的开发环境。</p>
+                </div>
+            </div>
+        </section>
+        <section class="courses-section">
+            <div class="courses-container" id="section-2">
+                <div class="courses-title">
+                    <img src="./img/sub-title-course.png" alt="">
+                </div>
+                <div class="courses-video">
+                    <video id="myVideo" src="./img/myvideo.mp4" muted controls poster="./img/v.jpg">
+                    </video>
+                </div>
+                <div class="courses-info">
+                    <p class="courses-info-title">DragonBoard™ 410c开发公开课</p>
+                    <span class="courses-info-all">
+                        <p>共10门课程</p>
+                        <p>已上线2门</p>
+                        <p>时长：35分17秒</p>
+                    </span>
+                </div>
+                <div class="courses-submain">
+                    <div class="courses-submain-left">
+                        <div class="select-menu">
+                            <div class="select">
+                                <i class="select-arrow">
+                                    <img src="./img/arrow-icon.png" alt="">
+                                </i>
+                                <span class="select-course">第一课 课程介绍</span>
+                                <i class="select-down">
+                                    <img src="./img/download-icon.png" alt="">
+                                </i>
+                            </div>
+                            <div class="select-list">
+                                <div class="select-option">
+                                    <span class="select-option-title">1.1 Dragonboard 课程体系结构及内容</span>
+                                    <span class="select-option-time">15 : 07</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select-menu">
+                            <div class="select">
+                                <i class="select-arrow">
+                                    <img src="./img/arrow-icon.png" alt="">
+                                </i>
+                                <span class="select-course">第二课 专业术语/技术概念</span>
+                                <i class="select-down">
+                                    <img src="./img/download-icon.png" alt="">
+                                </i>
+                            </div>
+                            <div class="select-list">
+                                <div class="select-option">
+                                    <span class="select-option-title">1.1 Dragonboard 课程体系结构及内容</span>
+                                    <span class="select-option-time">03 : 17</span>
+                                </div>
+                                <div class="select-option">
+                                    <span class="select-option-title">2.2 获取 DragonBoard 410c 开发板</span>
+                                    <span class="select-option-time">03 : 17</span>
+                                </div>
+                                <div class="select-option">
+                                    <span class="select-option-title">2.3 启动你的 DragonBoard 410c</span>
+                                    <span class="select-option-time">03 : 17</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select-menu">
+                            <div class="select">
+                                <i class="select-arrow">
+                                    <img src="./img/arrow-icon.png" alt="">
+                                </i>
+                                <span class="select-course">第三课 简介 DragonBoard 410c 的开发环境</span>
+                                <i class="select-down">
+                                    <img src="./img/download-icon.png" alt="">
+                                </i>
+                            </div>
+                            <div class="select-list">
+                                <div class="select-option">
+                                    <span class="select-option-title">3.1 DragonBoard 410c 概览</span>
+                                    <span class="select-option-time">03 : 17</span>
+                                </div>
+                                <div class="select-option">
+                                    <span class="select-option-title">3.2 获取 DragonBoard 410c 开发板</span>
+                                    <span class="select-option-time">03 : 17</span>
+                                </div>
+                                <div class="select-option">
+                                    <span class="select-option-title">3.3 启动你的 DragonBoard 410c</span>
+                                    <span class="select-option-time">03 : 17</span>
+                                </div>
+                                <div class="select-option">
+                                    <span class="select-option-title">3.4 DragonBoard 410c 概览</span>
+                                    <span class="select-option-time">03 : 17</span>
+                                </div>
+                                <div class="select-option">
+                                    <span class="select-option-title">3.5 获取 DragonBoard 410c 开发板</span>
+                                    <span class="select-option-time">03 : 17</span>
+                                </div>
+                                <div class="select-option">
+                                    <span class="select-option-title">3.6 启动你的 DragonBoard 410c</span>
+                                    <span class="select-option-time">03 : 17</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="courses-submain-right">
+                        <div class="courses-right-info">
+                            <h1>课程信息</h1>
+                            <div class="info-people">适合人群</div>
+                            <div class="info-peopl-name">创客、嵌入式开发人员、开发板爱好者、 软件开发人员。</div>
+                            <div class="info-time">发布时间 2016-09-22</div>
+                            <div class="info-student">学习人数 143</div>
+                            <div class="info-enterprice">
+                                <span class="info-enterprice-title">合作企业</span>
+                                <img src="./img/logo_qua.png" alt="">
+                            </div>
+                            <div class="info-tag">课程标签</div>
+                            <div class="info-tag-name">
+                                <span>DragonBoard</span>
+                                <span>Android</span>
+                                <span>高通</span>
+                                <span>骁龙</span>
+                            </div>
+                        </div>
+                        <div class="courses-right-communicate">
+                            <h1>技术交流</h1>
+                            <div class="communicate-wiebo">
+                                <img src="./img/icon_weibo.png" alt="">
+                                <span class="communicate-wiebo-title">Qualcomm开发者社区微博</span>
+                            </div>
+                            <div class="communicate-qq">
+                                <img src="./img/icon_qq.png" alt="">
+                                <div class="communicate-qq-title">
+                                    <div class="qq-social">技术交流群：370687734</div>
+                                    <span class="qq-code" style="margin-right: 10px;">二维码</span>
+                                    <span class="qq-apply">一键加群</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="teachers-section">
+            <div class="teachers-container" id="section-3">
+                <div class="teachers-title">
+                    <img src="./img/sub-title-teacher.jpg" alt="">
+                </div>
+                <div class="teachers-slider">
+                    <!-- <div class="teacher-pre">
+                        <img src="./img/pre.png" alt="">
+                    </div>
+                    <div class="teacher-next">
+                        <img src="./img/next.png" alt="">
+                    </div> -->
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="teachers-item">
+                                    <div class="teachers-item-img">
+                                        <img src="./img/t_1.jpg" alt="">
+                                    </div>
+                                    <p class="teachers-item-name">龙辉</p>
+                                    <p class="teachers-item-label">
+                                        中科创达软件工程师
+                                        <br>
+                                        Qualcomm开发者社区技术支持
+                                    </p>
+                                    <p class="teachers-item-description">从事安卓驱动研究，专注于display驱动研发，在嵌入式软件开发上有...</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="teachers-item">
+                                    <div class="teachers-item-img">
+                                        <img src="./img/t_2.jpg" alt="">
+                                    </div>
+                                    <p class="teachers-item-name">肖淼森</p>
+                                    <p class="teachers-item-label">
+                                        中科创达软件工程师
+                                        <br>
+                                        Qualcomm开发者社区技术支持
+                                    </p>
+                                    <p class="teachers-item-description">软件研发从业3年，专注android驱动软件研发。</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="teachers-item">
+                                    <div class="teachers-item-img">
+                                        <img src="./img/t_3.jpg" alt="">
+                                    </div>
+                                    <p class="teachers-item-name">龙辉</p>
+                                    <p class="teachers-item-label">
+                                        中科创达软件工程师
+                                    </p>
+                                    <p class="teachers-item-description">专注于Android底层驱动开发，有一定的Linux驱动开发经验。</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="teachers-item">
+                                    <div class="teachers-item-img">
+                                        <img src="./img/t_4.jpg" alt="">
+                                    </div>
+                                    <p class="teachers-item-name">王庆民</p>
+                                    <p class="teachers-item-label">
+                                        中科创达软件工程师
+                                    </p>
+                                    <p class="teachers-item-description">
+                                        软件开发从业7年，具有丰富的Android、linux等经验，精通Framework、多媒体和音视频
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="teachers-item">
+                                    <div class="teachers-item-img">
+                                        <img src="./img/t_5.jpg" alt="">
+                                    </div>
+                                    <p class="teachers-item-name">王庆民</p>
+                                    <p class="teachers-item-label">
+                                        中科创达软件工程师
+                                    </p>
+                                    <p class="teachers-item-description">
+                                        软件开发从业7年，具有丰富的Android、linux等经验，精通Framework、多媒体和音视频
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="products-section">
+            <div class="products-container" id="section-4">
+                <div class="products-title">
+                    <img src="./img/sub-title-410.png" alt="">
+                </div>
+                <div class="products-content">
+                    <div class="products-img">
+                        <img src="./img/img_1.jpg" alt="">
+                    </div>
+                    <div class="products-content-info">
+                        <p class="products-info-title">DragonBoard™ 410c 开发板</p>
+                        <p class="products-info-description">
+                            DragonBoard 410c将是首款基于Qualcomm Snapdragon系列处理器的开发板。它有许多高级特性，
+                            <br>
+                            强大的处理器，Wi-Fi和蓝牙连接，支持GPS。所有这些先进的功能都集成在仅有信用卡大小的一张开发板中<br>
+                            。基于64bit计算的Snapdragon410处理器，DragonBoard410c遵从96Boards消费版规格。
+                        </p>
+                        <a class="products-info-buy" href="javascript:;">立即购买</a>
+                        <a class="products-info-more" href="javascript:;">了解更多</a>
+                        <div class="products-tag-content">
+                            <p class="products-tag">相关产品</p>
+                            <a class="products-tag-link" href="javascript:;">DragonBoard 410c 开发套件</a>
+                            <a class="products-tag-link" style="width: 183px;" href="javascript:;">96Boards
+                                Sensors夹层板</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="products-info-guide">
+                    <img src="./img/bg_red.png" alt="">
+                    <img src="./img/bg_ora.png" alt="">
+                    <img src="./img/bg_blue.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="about-section">
+            <div class="about-container" id="section-5">
+                <div class="about-title">
+                    <img src="./img/about_title.jpg" alt="">
+                </div>
+                <div class="about-community">
+                    <ul class="about-community-list">
+                        <li class="about-community-item">
+                            <img src="./img/about_qualcomm.jpg" alt="">
+                            <p class="community-item-title">公司概况</p>
+                            <p class="community-item-subtitle">共赴创新之路</p>
+                        </li>
+                        <li class="about-community-item">
+                            <img src="./img/about_weibo.jpg" alt="">
+                            <p class="community-item-title">开发者社区微博</p>
+                            <p class="community-item-subtitle">粉丝：7 万+</p>
+                        </li>
+                        <li class="about-community-item">
+                            <img src="./img/about_qq.jpg" alt="">
+                            <p class="community-item-title">开发者交流群</p>
+                            <p class="community-item-subtitle">群号码：370687734</p>
+                            <span class="community-item-btn">一键加群</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="page-footer">
+        <div class="footer-container"></div>
+    </footer>
+    <script>
+        // 建立单例对象
+        const PAGE = {
+            data: {
+                navigatorBarIdArr: ['section-1', 'section-2', 'section-3', 'section-4', 'section-5'],
+                navigatorBarAcitiveId: '',
+                navigatorBarFixed: false,
+                navigatorBarFixedOffset: 570,
+                navigatorBarHeight: 70,
+            },
+            init: function () {
+                this.bind()
+            },
+            bind: function () {
+                // 添加滚动事件
+                window.addEventListener('scroll', this.refreshNavigator)
+                // 获取父级元素
+                let navigatorBar = document.getElementById('navigator-bar')
+                // 相当于实参
+                this.onEventlister(navigatorBar, 'click', 'navigator-item', this.goNavigator)
+            },
+            onEventlister: function (parentNode, action, childClassName, callback) {
+                parentNode.addEventListener(action, function (e) {
+                    if (e.target.className.indexOf(childClassName) >= 0) {
+                        callback(e)
+                    }
+                })
+            },
+            refreshNavigator: function () {
+                PAGE.fixedNavigator()
+                PAGE.heightLightNavigator()
+                PAGE.videoPlay()
+            },
+            // 导航定位
+            fixedNavigator: function () {
+                // 获取滚动条滚动的高度
+                let scrollTop = document.documentElement.scrollTop
+                // console.log(scrollTop);
+                let navigatorBarTop = (PAGE.data.navigatorBarFixedOffset + PAGE.data.navigatorBarHeight)
+                // console.log(navigatorBarTop);
+                let navigatorBarFixed = scrollTop >= navigatorBarTop
+                // console.log(navigatorBarFixed);
+                if (PAGE.data.navigatorBarFixed !== navigatorBarFixed) {
+                    PAGE.data.navigatorBarFixed = navigatorBarFixed
+                    let navigatorBar = document.getElementById('navigator-bar')
+                    // console.log(navigatorBar);
+                    navigatorBar.className = navigatorBarFixed ? 'navigator-container fixed' : 'navigator-container'
+                }
+            },
+            // 导航高亮
+            heightLightNavigator: function () {
+                let scrollTop = document.documentElement.scrollTop
+                let filterNav = PAGE.data.navigatorBarIdArr.filter(data => {
+                    // 定位的id到文档顶部的距离
+                    let offsetTop = document.getElementById(data).offsetTop
+                    // 返回一个滚动距离大于文档顶部所筛选包含的数组id 注意导航栏高度
+                    return scrollTop >= offsetTop - PAGE.data.navigatorBarHeight
+                })
+                // console.log(filterNav);
+                let navigatorBarAcitiveId = filterNav.length ? filterNav[filterNav.length - 1] : '';
+                // console.log(navigatorBarAcitiveId);
+                // 更新PAGE.data的navigatorBarAcitiveId值
+                if (PAGE.data.navigatorBarAcitiveId !== navigatorBarAcitiveId) {
+                    PAGE.data.navigatorBarAcitiveId = navigatorBarAcitiveId
+                    // 获取导航栏的项目元素
+                    let navigatorBarItems = document.getElementsByClassName('navigator-item')
+                    // console.log(navigatorBarItems);
+                    for (i = 0; i < navigatorBarItems.length; i++) {
+                        // 获取每一个导航元素
+                        let navigatorBarItem = navigatorBarItems[i]
+                        // 获取对应每一个项目元素的id
+                        let dataNav = navigatorBarItem.dataset.nav
+                        // console.log(dataNav);
+                        navigatorBarItem.className = dataNav === navigatorBarAcitiveId ? 'navigator-item active' : 'navigator-item'
+                    }
+                }
+            },
+            // 导航移动
+            goNavigator: function (e) {
+                let id = e.target.dataset.nav
+                // console.log(id);
+                // 获取id 到文档顶部的距离
+                let offsetTop = document.getElementById(id).offsetTop - PAGE.data.navigatorBarHeight
+                // 定义滑动条的滚动位置
+                document.documentElement.scrollTop = offsetTop
+            },
+            // 视频自动播放
+            videoPlay: function () {
+                let scrollTop = document.documentElement.scrollTop
+                let offsetTop = document.getElementById('section-2').offsetTop - PAGE.data.navigatorBarHeight
+                let offsetdown = document.getElementById('section-3').offsetTop - PAGE.data.navigatorBarHeight
+                let video = document.getElementById('myVideo')
+                if (scrollTop >= offsetTop && scrollTop < offsetdown) {
+                    video.play()
+                } else {
+                    video.pause()
+                }
+            }
+        }
+        PAGE.init()
+
+        // 列表展开和隐藏
+        const select = document.getElementsByClassName('select')
+        const selectList = document.getElementsByClassName('select-list')
+        const selectArrow = document.getElementsByClassName('select-arrow')
+        for (let i = 0; i < select.length; i++) {
+            select[i].addEventListener('click', function () {
+                selectList[i].classList.toggle('active')
+                selectArrow[i].classList.toggle('active')
+            })
+        }
+
+        // // 单点轮播图
+        // const teachersList = document.querySelector('.teachers-list')
+        // const sliderNext = document.querySelector('.teacher-next')
+        // const sliderPre = document.querySelector('.teacher-pre')
+        // sliderNext.addEventListener('click', function () {
+        //     let isActive = teachersList.className.indexOf('active')
+        //     if (isActive > 0) {
+        //         teachersList.className = 'teachers-list'
+        //     } else {
+        //         teachersList.className = 'teachers-list active'
+        //     }
+        // });
+        // sliderPre.addEventListener('click', function () {
+        //     let isActive = teachersList.className.indexOf('active')
+        //     if (isActive > 0) {
+        //         teachersList.className = 'teachers-list'
+        //     } else {
+        //         teachersList.className = 'teachers-list active'
+        //     }
+        // });
+    </script>
+    <script src="./js/swiper.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper', {
+            slidesPerView: 3,
+            direction: getDirection(),
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+                resize: function () {
+                    swiper.changeDirection(getDirection());
+                },
+            },
+        });
+
+        function getDirection() {
+            var windowWidth = window.innerWidth;
+            var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+            return direction;
+        }
+    </script>
+</body>
+
+</html>

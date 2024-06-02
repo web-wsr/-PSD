@@ -1,0 +1,642 @@
+body {
+    height: 100%;
+    width: 1903px;
+    min-width: 1184px;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+/* ::-webkit-scrollbar {
+    display: none;
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header部分 */
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 74px;
+    margin: 0 480px;
+    background-color: #fff;
+}
+
+
+.logo-img {
+    width: 260px;
+    height: 74px;
+}
+
+.user-log,
+.user-login {
+    display: inline-block;
+    line-height: 22px;
+    color: #333;
+    font-family: MicrosoftYaHei;
+}
+
+.user-log::after {
+    content: '|';
+    margin: 0 6px;
+}
+
+
+.banner-wrapper {
+    height: 426px;
+    width: 100%;
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* .banner-wrapper img {
+    width: 100%;
+} */
+
+.page-mainer {
+    background-color: #fff;
+}
+
+/* navigator部分 */
+.navigator-container {
+    height: 70px;
+    width: 100%;
+    background-color: #153188;
+}
+
+.navigator-container.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+}
+
+.navigator-list {
+    display: flex;
+    margin: 0 510px 0 480px;
+}
+
+.navigator-item {
+    flex: 1;
+    line-height: 70px;
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.navigator-item:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.navigator-item.active {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* introduction部分 */
+.introduction-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 480px;
+}
+
+.introduction-title {
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.introduction-txt {
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333333;
+    line-height: 30px;
+}
+
+/* courses部分 */
+.courses-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 480px;
+}
+
+.courses-title {
+    padding-top: 57px;
+    padding-bottom: 30px;
+}
+
+.courses-video {
+    width: 960px;
+    height: 540px;
+}
+
+.courses-info {
+    width: 280px;
+    margin: 25px 0 20px;
+}
+
+.courses-info-title {
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    font-size: 18px;
+    color: #333333;
+    line-height: 20px;
+    height: 20px;
+    margin-bottom: 14px;
+}
+
+.courses-info-all {
+    display: flex;
+    justify-content: space-between;
+    font-family: Lantinghei SC;
+    font-weight: 600;
+    font-size: 12px;
+    color: #999999;
+    line-height: 12px;
+}
+
+
+/* courses-submain 部分 */
+.courses-submain {
+    display: flex;
+    justify-content: space-between;
+}
+
+.select {
+    display: flex;
+    align-items: center;
+    width: 700px;
+    height: 40px;
+    padding: 0 18px 0 20px;
+    background: #F7F7F7;
+    box-shadow: 0px -1px 0px 0px #E4E4E4;
+}
+
+.select-arrow {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s linear 0.2s;
+}
+
+.select-arrow.active {
+    transform: rotate(180deg);
+}
+
+.select-down {
+    width: 11px;
+    height: 11px;
+    line-height: 11px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.select-course {
+    flex: 1;
+    padding-left: 10px;
+    font-family: Lantinghei SC;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333333;
+    line-height: 14px;
+}
+
+.select-list {
+    display: block;
+}
+
+.select-list.active {
+    display: none;
+}
+
+.select-option {
+    display: flex;
+    align-items: center;
+    width: 700px;
+    height: 40px;
+    padding: 0 18px 0 51px;
+    box-shadow: 0px 1px 0px 0px #F5F5F5;
+}
+
+.select-option-title {
+    flex: 1;
+    font-family: FZLTHK;
+    font-weight: normal;
+    font-size: 12px;
+    color: #666666;
+    line-height: 13px;
+    cursor: pointer;
+}
+
+.select-option-title:hover {
+    color: #009DF7;
+}
+
+.select-option-time {
+    font-family: FZLTHK;
+    font-weight: normal;
+    font-size: 12px;
+    color: #999999;
+    line-height: 10px;
+}
+
+/* courses-submain-right 部分 */
+.courses-submain-right {
+    width: 210px;
+    font-family: Lantinghei SC;
+    font-weight: 600;
+
+}
+
+.courses-right-info {
+    border-bottom: 1px solid #F5F5F5;
+}
+
+
+.courses-right-info h1 {
+    font-size: 16px;
+    color: #333333;
+    line-height: 16px;
+}
+
+.info-people {
+    font-size: 12px;
+    color: #999999;
+    line-height: 24px;
+    margin-top: 17px;
+}
+
+.info-peopl-name {
+    font-size: 12px;
+    color: #666666;
+    line-height: 18px;
+}
+
+.info-time {
+    font-size: 12px;
+    color: #999999;
+    line-height: 24px;
+    margin-top: 20px;
+}
+
+.info-student {
+    font-size: 12px;
+    color: #999999;
+    line-height: 24px;
+    margin-top: 18px;
+}
+
+.info-enterprice-title {
+    font-family: Lantinghei SC;
+    font-weight: 600;
+    font-size: 12px;
+    color: #999999;
+    line-height: 24px;
+}
+
+.info-tag {
+    font-size: 12px;
+    color: #999999;
+    line-height: 24px;
+}
+
+.info-tag-name {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.info-tag-name span {
+    display: inline-block;
+    padding: 5px 8px 2px 6px;
+    font-family: Lantinghei SC;
+    font-weight: 600;
+    font-size: 12px;
+    color: #666666;
+    line-height: 18px;
+    background: #F7F7F7;
+    border-radius: 2px;
+}
+
+.courses-right-communicate h1 {
+    font-size: 16px;
+    color: #333333;
+    line-height: 16px;
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
+
+.communicate-wiebo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.communicate-wiebo-title {
+    font-family: Lantinghei SC;
+    font-weight: 600;
+    font-size: 12px;
+    color: #666666;
+    line-height: 18px;
+}
+
+.communicate-wiebo img,
+.communicate-qq img {
+    width: 50px;
+    height: 50px;
+    margin-right: 7px;
+}
+
+.communicate-qq {
+    display: flex;
+    align-items: center;
+}
+
+.qq-social {
+    font-family: Lantinghei SC;
+    font-weight: 600;
+    font-size: 12px;
+    color: #666666;
+    line-height: 18px;
+    margin-bottom: 8px;
+}
+
+.qq-code,
+.qq-apply {
+    display: inline-block;
+    font-family: Lantinghei SC;
+    font-weight: 600;
+    font-size: 12px;
+    color: #FFFFFF;
+    line-height: 18px;
+    padding: 5px 12px 5px 13px;
+    background: #00A8FF;
+    border-radius: 2px 2px 2px 2px;
+    cursor: pointer;
+}
+
+
+/* 轮播图部分 */
+/* teachers-section部分 */
+.teachers-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 480px;
+}
+
+.teachers-title {
+    padding-top: 60px;
+    padding-bottom: 52px;
+}
+
+.teachers-slider {
+    position: relative;
+    padding: 0 25px;
+    overflow: hidden;
+}
+
+.teachers-list.active {
+    transform: translateX(-255px);
+}
+
+.teacher-pre {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.teacher-next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.teachers-list {
+    display: flex;
+    transition: all .5s ease-in-out;
+}
+
+.teachers-item {
+    width: 195px;
+    text-align: center;
+}
+
+.teachers-item-name {
+    font-family: Lantinghei SC;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333333;
+    line-height: 28px;
+    padding-top: 10px;
+}
+
+.teachers-item-label {
+    font-family: Lantinghei SC;
+    font-weight: 600;
+    font-size: 12px;
+    color: #999999;
+    line-height: 18px;
+}
+
+.teachers-item-description {
+    width: 195px;
+    font-family: Lantinghei SC;
+    font-weight: 600;
+    font-size: 12px;
+    color: #666666;
+    line-height: 18px;
+    text-align: left;
+    padding-top: 15px;
+
+}
+
+
+
+
+
+/* products-section部分 */
+.products-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 480px;
+}
+
+.products-title {
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.products-content {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 60px;
+}
+
+.products-content-info {
+    margin-left: 20px;
+}
+
+.products-info-title {
+    font-family: MicrosoftYaHei;
+    font-weight: 600;
+    font-size: 20px;
+    color: #333333;
+    line-height: 23px;
+}
+
+.products-info-description {
+    font-family: FZLTHK;
+    font-size: 13px;
+    color: #666666;
+    line-height: 22px;
+    margin-top: 12px;
+}
+
+.products-info-buy {
+    font-family: Lantinghei SC;
+    width: 130px;
+    display: inline-block;
+    line-height: 40px;
+    text-align: center;
+    background: #00A8FF;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    margin-top: 21px;
+    cursor: pointer;
+}
+
+.products-info-more {
+    width: 130px;
+    display: inline-block;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #00A8FF;
+    font-size: 15px;
+    font-family: Lantinghei SC;
+    font-weight: 600;
+    color: #00A8FF;
+    margin-left: 10px;
+    margin-top: 21px;
+    cursor: pointer;
+}
+
+.products-tag-content {
+    display: flex;
+    /* flex-wrap: nowrap; */
+    width: 450px;
+    justify-content: space-between;
+    margin-top: 25px;
+    align-items: center;
+}
+
+.products-tag {
+    font-family: FZLTHK;
+    font-weight: 400;
+    font-size: 15px;
+    color: #666666;
+    line-height: 15px;
+}
+
+.products-tag-link {
+    font-family: FZLTHK;
+    font-weight: normal;
+    font-size: 12px;
+    color: #1C7C89;
+    line-height: 18px;
+    width: 196px;
+    height: 30px;
+    background: #caeaef;
+    border-radius: 14px;
+    text-align: center;
+    line-height: 27px;
+}
+
+.products-info-guide {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* about-section部分 */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 480px;
+}
+
+.about-title {
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+.about-community {
+    padding: 0 86px;
+    padding-bottom: 65px;
+}
+
+.about-community-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about-community-item {
+    text-align: center;
+}
+
+.community-item-title {
+    font-family: Lantinghei SC;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333333;
+    line-height: 14px;
+    padding-top: 22px;
+}
+
+.community-item-subtitle {
+    font-family: Lantinghei SC;
+    font-weight: 600;
+    font-size: 12px;
+    color: #999999;
+    line-height: 12px;
+    padding-top: 13px;
+}
+
+.community-item-btn {
+    display: inline-block;
+    font-family: Lantinghei SC;
+    font-weight: 600;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 18px;
+    padding: 9px 18px 9px 17px;
+    background: #00A8FF;
+    border-radius: 2px 2px 2px 2px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+
+/* page-footer */
+.footer-container {
+    height: 500px;
+}
