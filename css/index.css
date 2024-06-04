@@ -1,7 +1,7 @@
 body {
     height: 100%;
-    width: 1903px;
-    min-width: 1184px;
+    width: 100%;
+    min-width: 1000px;
     color: rgba(0, 0, 0, 0.65);
     font-size: 14px;
     margin: 0 auto;
@@ -62,6 +62,7 @@ a {
 } */
 
 .page-mainer {
+    width: 100%;
     background-color: #fff;
 }
 
@@ -169,13 +170,16 @@ a {
 /* courses-submain 部分 */
 .courses-submain {
     display: flex;
-    justify-content: space-between;
+}
+
+.courses-submain-left {
+    flex: 1;
+    margin-right: 30px;
 }
 
 .select {
     display: flex;
     align-items: center;
-    width: 700px;
     height: 40px;
     padding: 0 18px 0 20px;
     background: #F7F7F7;
@@ -188,7 +192,6 @@ a {
     line-height: 20px;
     text-align: center;
     cursor: pointer;
-    transition: 0.2s linear 0.2s;
 }
 
 .select-arrow.active {
@@ -224,7 +227,6 @@ a {
 .select-option {
     display: flex;
     align-items: center;
-    width: 700px;
     height: 40px;
     padding: 0 18px 0 51px;
     box-shadow: 0px 1px 0px 0px #F5F5F5;
@@ -435,6 +437,7 @@ a {
 
 .teachers-item {
     width: 195px;
+    /* height: 205px; */
     text-align: center;
 }
 

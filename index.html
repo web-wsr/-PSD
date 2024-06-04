@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>高通</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <style>
         html,
         body {
@@ -16,6 +16,7 @@
         }
 
         /* body {
+            background: #eee;
             font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
             font-size: 14px;
             color: #000;
@@ -23,7 +24,7 @@
             padding: 0;
         } */
 
-        .swiper {
+        .swiper-container {
             width: 100%;
             height: 100%;
         }
@@ -32,21 +33,20 @@
             text-align: center;
             font-size: 18px;
             background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
             display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
             justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
             align-items: center;
-        }
-
-        @media (max-width: 760px) {
-            .swiper-button-next {
-                right: 20px;
-                transform: rotate(90deg);
-            }
-
-            .swiper-button-prev {
-                left: 20px;
-                transform: rotate(90deg);
-            }
         }
     </style>
 </head>
@@ -235,13 +235,7 @@
                     <img src="./img/sub-title-teacher.jpg" alt="">
                 </div>
                 <div class="teachers-slider">
-                    <!-- <div class="teacher-pre">
-                        <img src="./img/pre.png" alt="">
-                    </div>
-                    <div class="teacher-next">
-                        <img src="./img/next.png" alt="">
-                    </div> -->
-                    <div class="swiper">
+                    <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="teachers-item">
@@ -309,6 +303,20 @@
                                     <p class="teachers-item-description">
                                         软件开发从业7年，具有丰富的Android、linux等经验，精通Framework、多媒体和音视频
                                     </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="teachers-item">
+                                    <div class="teachers-item-img">
+                                        <img src="./img/t_1.jpg" alt="">
+                                    </div>
+                                    <p class="teachers-item-name">龙辉</p>
+                                    <p class="teachers-item-label">
+                                        中科创达软件工程师
+                                        <br>
+                                        Qualcomm开发者社区技术支持
+                                    </p>
+                                    <p class="teachers-item-description">从事安卓驱动研究，专注于display驱动研发，在嵌入式软件开发上有...</p>
                                 </div>
                             </div>
                         </div>
@@ -516,29 +524,25 @@
         //     }
         // });
     </script>
-    <script src="./js/swiper.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
     <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper('.swiper', {
+        var swiper = new Swiper('.swiper-container', {
             slidesPerView: 3,
-            direction: getDirection(),
+            spaceBetween: 30,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-            on: {
-                resize: function () {
-                    swiper.changeDirection(getDirection());
-                },
-            },
         });
-
-        function getDirection() {
-            var windowWidth = window.innerWidth;
-            var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
-
-            return direction;
-        }
     </script>
 </body>
 
